@@ -1,0 +1,7 @@
+title  = .titletext
+body = .esc-lead-snippet-wrapper
+time = .al-attribution-timestamp
+image = .esc-thumbnail-image
+
+
+bloco = .esc-layout-article-cell
