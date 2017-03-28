@@ -17,7 +17,7 @@ class NewsvillesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create newsville" do
     assert_difference('Newsville.count') do
-      post newsvilles_url, params: { newsville: { body: @newsville.body, image_url: @newsville.image_url, time: @newsville.time, title: @newsville.title } }
+      post newsvilles_url, params: { newsville: { body: @newsville.body, image_url: @newsville.image_url, time: @newsville.time, title: @newsville.title, title_url: @newsville.title_url } }
     end
 
     assert_redirected_to newsville_url(Newsville.last)
@@ -34,7 +34,7 @@ class NewsvillesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update newsville" do
-    patch newsville_url(@newsville), params: { newsville: { body: @newsville.body, image_url: @newsville.image_url, time: @newsville.time, title: @newsville.title } }
+    patch newsville_url(@newsville), params: { newsville: { body: @newsville.body, image_url: @newsville.image_url, time: @newsville.time, title: @newsville.title, title_url: @newsville.title_url } }
     assert_redirected_to newsville_url(@newsville)
   end
 
