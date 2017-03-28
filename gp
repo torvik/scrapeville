@@ -1,4 +1,4 @@
 git add -A
-git commit -m "noko"
+git commit -m "newsville scrape"
 git push -u origin master
 git push heroku master
