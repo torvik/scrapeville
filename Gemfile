@@ -51,5 +51,7 @@ group :production do
   gem 'rails_12factor', '~> 0.0.3'
 end
 
-
 gem 'nokogiri', '~> 1.6', '>= 1.6.8'
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'simple_form', '~> 3.2', '>= 3.2.1'
+
