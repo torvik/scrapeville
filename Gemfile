@@ -54,4 +54,4 @@ end
 gem 'nokogiri', '~> 1.6', '>= 1.6.8'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
-
+gem 'devise', '~> 4.1', '>= 4.1.1'
