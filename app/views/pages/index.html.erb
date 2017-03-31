@@ -2,8 +2,8 @@
         <!-- Portfolio Item Heading -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Portfolio Item
-                    <small>Item Subheading</small>
+                <h1 class="page-header">World News At It's Best
+                    <small>Award Winning Coverage</small>
                 </h1>
             </div>
         </div>
@@ -13,19 +13,16 @@
         <div class="row">
 
             <div class="col-md-8">
-                <img class="img-responsive" src="http://placehold.it/750x500" alt="">
+                <img class="img-responsive img-rounded" src="http://bloximages.chicago2.vip.townnews.com/unionrecorder.com/content/tncms/assets/v3/editorial/3/9c/39c7f414-0018-11e6-b965-7bbf15b5c735/570bf5c9d0cb8.image.jpg" alt="">
             </div>
 
             <div class="col-md-4">
-                <h3>Project Description</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-                <h3>Project Details</h3>
+                <h3>Last Comments</h3>
+                <% @comments.each do |comment| %>
                 <ul>
-                    <li>Lorem Ipsum</li>
-                    <li>Dolor Sit Amet</li>
-                    <li>Consectetur</li>
-                    <li>Adipiscing Elit</li>
+                    <li><%= truncate(comment.body, length: 50) %> </li>
                 </ul>
+                <% end %>
             </div>
 
         </div>
@@ -38,29 +35,17 @@
                 <h3 class="page-header">Related Projects</h3>
             </div>
 
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-                </a>
+            <% @newsvilles.each do |news| %>
+            <div class="panel panel-default col-md-3">
+              <div class="panel-heading">
+                <h3 class="panel-title"><%= link_to news.title, news %></h3>
+              </div>
+              <div class="panel-body text-center">
+                <%= image_tag ("#{news.image_url}"), class: "img-rounded" %>
+              </div>
             </div>
 
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
+            <% end %>
 
         </div>
         <!-- /.row -->

@@ -22,11 +22,11 @@
         <td><%= newsville.body %></td>
         <td><%= newsville.time %></td>
         <% if newsville.image_url.present? %>
-        <td><%= image_tag("#{newsville.image_url}") %></td>
+        <td><%= image_tag("#{newsville.image_url}" , class: "img-rounded") %></td>
         <% else %>
         <td><%= image_tag("nia.jpeg") %></td>
         <% end %>
-        <td><%= link_to 'Show', newsville , class: "btn btn-success btn-xs" %></td>
+        <td><%= link_to 'Comment', newsville , class: "btn btn-success btn-xs" %></td>
         <td><%= link_to 'Edit', edit_newsville_path(newsville), class: "btn btn-warning btn-xs" %></td>
         <td><%= link_to 'Destroy', newsville, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-xs" %></td>
       </tr>
