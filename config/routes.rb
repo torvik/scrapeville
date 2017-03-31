@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
 
-  resources :comments
+
   devise_for :users, :controllers => { registrations: 'registrations' }
 
-  #devise_for :users
-  resources :newsvilles
+  resources :newsvilles do
+    resources :comments
+  end
+
   root to: 'pages#index'
-  #root to: 'application#google_news'
+
 
 end
