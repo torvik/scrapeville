@@ -27,8 +27,12 @@
         <td><%= image_tag("nia.jpeg") %></td>
         <% end %>
         <td><%= link_to 'Comment', newsville , class: "btn btn-success btn-xs" %></td>
+        <% if can? :update, newsville %>
         <td><%= link_to 'Edit', edit_newsville_path(newsville), class: "btn btn-warning btn-xs" %></td>
+        <% end %>
+        <% if can? :destroy, newsville %>
         <td><%= link_to 'Destroy', newsville, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-xs" %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
