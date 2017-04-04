@@ -1,4 +1,4 @@
 git add -A
-git commit -m "added aws"
+git commit -m "atualizacao aws"
 git push -u origin master
 git push heroku master
