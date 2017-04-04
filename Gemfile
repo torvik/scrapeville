@@ -34,5 +34,6 @@ gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'devise', '~> 4.1', '>= 4.1.1'
 gem 'cancancan', '~> 1.13', '>= 1.13.1'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
-
+gem 'paperclip', '~> 5.1'
+gem 'aws-sdk', '< 2.0'
 
