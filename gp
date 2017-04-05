@@ -1,4 +1,4 @@
 git add -A
-git commit -m "loading"
+git commit -m "loading and nia"
 git push -u origin master
 git push heroku master
