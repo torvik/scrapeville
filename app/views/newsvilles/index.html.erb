@@ -2,7 +2,8 @@
 
 <h1>Welcome to Newsville</h1>
 
-<%= will_paginate @newsvilles %>
+
+<%= will_paginate @newsvilles, renderer: BootstrapPagination::Rails %>
 
 <table class="table table-bordered">
   <thead>
@@ -22,7 +23,7 @@
         <td><%= link_to "Original Story", newsville.title_url, :target => "_blank" %></td>
         <td><%= newsville.title %></td>
         <td><%= newsville.body %></td>
-        <td><%= newsville.time %></td>
+        <td><%= newsville.created_at.strftime("%A, %d %b %Y %l:%M %p") %></td>
         <% if newsville.image_url.present? %>
         <td><%= image_tag("#{newsville.image_url}" , class: "img-rounded") %></td>
         <% else %>
@@ -45,5 +46,5 @@
 <%= link_to 'New Newsville', new_newsville_path, class: "btn btn-success" %>
 <br>
 
-<%= will_paginate @newsvilles %>
+<%= will_paginate @newsvilles, renderer: BootstrapPagination::Rails %>
 <br>
