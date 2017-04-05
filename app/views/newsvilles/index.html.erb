@@ -2,6 +2,8 @@
 
 <h1>Welcome to Newsville</h1>
 
+<%= will_paginate @newsvilles %>
+
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -40,4 +42,8 @@
 
 <br>
 
-<%= link_to 'New Newsville', new_newsville_path %>
+<%= link_to 'New Newsville', new_newsville_path, class: "btn btn-success" %>
+<br>
+
+<%= will_paginate @newsvilles %>
+<br>
